@@ -1,8 +1,16 @@
+import NavBar from "./components/NavBar/NavBar";
+import TrackList from "./components/TrackList/TrackList";
+import PlayList from "./components/PlayList/PlayList";
+
 function App() {
+  /* Logic */
+
   return (
-    <div>
-      <h1>Hello, World!</h1>
-    </div>
+    <>
+      <NavBar />
+      <TrackList />
+      <PlayList />
+    </>
   );
 }
 
