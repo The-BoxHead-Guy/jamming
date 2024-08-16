@@ -1,3 +1,31 @@
-.navBar__container {
+.nav__container {
+  width: 100%;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--white);
+
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+
+  & img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+.title__container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.search-bar__container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+span {
+  color: rgb(255, 176, 140);
 }

@@ -8,8 +8,10 @@ function App() {
   return (
     <>
       <NavBar />
-      <TrackList />
-      <PlayList />
+      <div className="app__container">
+        <TrackList />
+        <PlayList />
+      </div>
     </>
   );
 }

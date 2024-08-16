@@ -1,0 +1,26 @@
+:root {
+  --bg-color: hsl(0, 0%, 10%);
+
+  /* colors */
+  --white: hsl(0, 0%, 90%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color: var(--white);
+}
+
+body {
+  background-color: var(--bg-color);
+  max-width: 100vw;
+  max-height: 100vh;
+}
+
+#root {
+  width: 90%;
+  margin-inline: auto;
+  margin-block: 2.5rem;
+}
