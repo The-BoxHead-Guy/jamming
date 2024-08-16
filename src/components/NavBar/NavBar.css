@@ -3,10 +3,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid var(--white);
+  /* border: 1px solid var(--white); */
 
   padding: 0.5rem 1rem;
   border-radius: 0.75rem;
+
+  background: linear-gradient(90deg, var(--bg-nav), var(--bg-nav-lighter));
 
   & img {
     width: 2.5rem;
@@ -27,5 +29,5 @@
 }
 
 span {
-  color: rgb(255, 176, 140);
+  color: var(--light-salmon);
 }
