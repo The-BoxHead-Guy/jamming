@@ -1,7 +1,23 @@
-function PlayList() {
+function PlayList({ playlistData }) {
   return (
     <>
-      <h1>PlayList</h1>
+      <PlayListRender playlistData={playlistData} />
+    </>
+  );
+}
+
+function PlayListRender({ playlistData }) {
+  return (
+    <>
+      {playlistData.map((song) => {
+        return (
+          <>
+            <div className="song" key={song.id}>
+              {song.name}
+            </div>
+          </>
+        );
+      })}
     </>
   );
 }
