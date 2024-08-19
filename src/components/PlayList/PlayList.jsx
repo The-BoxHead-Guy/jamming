@@ -1,7 +1,9 @@
-function PlayList({ playlistData }) {
+import "./PlayList.css";
+
+function PlayList({ playlistData, title }) {
   return (
     <>
-      <PlayListRender playlistData={playlistData} />
+      <PlayListRender playlistData={playlistData}>{title}</PlayListRender>
     </>
   );
 }
@@ -9,16 +11,30 @@ function PlayList({ playlistData }) {
 function PlayListRender({ playlistData }) {
   return (
     <>
-      {playlistData.map((song) => {
-        return (
-          <>
-            <div className="song" key={song.id}>
-              {song.name}
-            </div>
-          </>
-        );
-      })}
+      <div className="playlist">
+        <PlayListTitle>Playlist</PlayListTitle>
+
+        {playlistData.length !== 0 ? (
+          playlistData.map((song) => {
+            return (
+              <div className="song" key={song.id}>
+                {song.name}
+              </div>
+            );
+          })
+        ) : (
+          <PlayListEmpty />
+        )}
+      </div>
     </>
+  );
+}
+
+function PlayListTitle({ children }) {
+  return (
+    <div className="playlist__title">
+      <h2>{children}</h2>
+    </div>
   );
 }
 

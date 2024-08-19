@@ -1,0 +1,31 @@
+.tracklist {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  /* border: solid 1px var(--white); */
+  background-color: var(--bg-nav-lighter);
+
+  border-radius: var(--default-radius);
+}
+
+.tracklist__empty {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+}
+
+.tracklist__empty img {
+  max-inline-size: 90%;
+  block-size: auto;
+  filter: drop-shadow(0 0 0.2rem var(--white));
+}

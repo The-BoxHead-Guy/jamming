@@ -1,0 +1,12 @@
+.playlist {
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+
+  background-color: var(--bg-nav-lighter);
+
+  border-radius: var(--default-radius);
+  /* border: solid 1px var(--white); */
+}
+

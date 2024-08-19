@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap");
+
 :root {
   --bg-color: hsl(0, 0%, 7.5%);
   --bg-color-lighter: hsl(0, 0%, 12.5%);
@@ -7,6 +9,15 @@
   /* colors */
   --white: hsl(0, 0%, 90%);
   --light-salmon: rgb(255, 176, 140);
+
+  /* Radius */
+
+  --default-radius: 0.75rem;
+
+  /* Fonts */
+
+  --lato: "Lato", sans-serif;
+  --red-hat-text: "Red Hat Text", sans-serif;
 }
 
 * {
@@ -15,16 +26,40 @@
 
 html {
   color: var(--white);
+  font-family: var(--lato);
+  height: 100%;
 }
 
 body {
   background: linear-gradient(280deg, var(--bg-color), var(--bg-color-lighter));
-  max-width: 100vw;
-  max-height: 100vh;
+  min-width: 100vw;
+  min-height: 100vh;
+  position: relative;
 }
 
 #root {
-  width: 90%;
+  height: 100%;
+  width: 100%;
   margin-inline: auto;
-  margin-block: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  inset: 0;
+  padding-inline: 1rem;
+}
+
+.app__container {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & main {
+    display: flex;
+    align-items: flex-start;
+    height: 100%;
+    width: 100%;
+    padding-block-end: 1rem;
+    gap: 1rem;
+  }
 }

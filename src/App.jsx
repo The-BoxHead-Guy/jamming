@@ -19,8 +19,10 @@ function App() {
     <>
       <NavBar />
       <div className="app__container">
-        <TrackList trackList={tracks} addTrack={addTrack} />
-        <PlayList playlistData={playlist} />
+        <main>
+          <TrackList trackList={tracks} addTrack={addTrack} />
+          <PlayList playlistData={playlist} />
+        </main>
       </div>
     </>
   );
