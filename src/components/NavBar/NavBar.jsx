@@ -14,7 +14,9 @@ function NavBar() {
           </div>
           <form action="#" className="search-bar__container">
             <input type="search" name="query" id="search-bar" />
-            <button type="submit">search</button>
+            <button type="submit" className="btn">
+              search
+            </button>
           </form>
         </nav>
       </div>

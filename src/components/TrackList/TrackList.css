@@ -27,5 +27,5 @@
 .tracklist__empty img {
   max-inline-size: 90%;
   block-size: auto;
-  filter: drop-shadow(0 0 0.2rem var(--white));
+  filter: drop-shadow(0.1rem 0.2rem 0.1rem var(--light-salmon));
 }

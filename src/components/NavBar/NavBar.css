@@ -13,9 +13,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-block: 1rem;
+    padding-block: var(--block-padding);
+    padding-inline: var(--inline-padding);
 
-    padding: 0.5rem 1rem;
     border-radius: var(--default-radius);
     background: linear-gradient(90deg, var(--bg-nav), var(--bg-nav-lighter));
 

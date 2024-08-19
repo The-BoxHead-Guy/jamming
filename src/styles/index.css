@@ -8,7 +8,8 @@
 
   /* colors */
   --white: hsl(0, 0%, 90%);
-  --light-salmon: rgb(255, 176, 140);
+  --light-salmon: hsl(19, 100%, 77%);
+  --light-salmon-transparent: hsla(19, 100%, 77%, 0.7);
 
   /* Radius */
 
