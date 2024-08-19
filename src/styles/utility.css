@@ -1,0 +1,21 @@
+button.btn {
+  font-size: 1.25rem;
+  font-family: var(--red-hat-text);
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+  border: solid 1px var(--light-salmon);
+  padding-block: var(--block-padding);
+  padding-inline: var(--inline-padding);
+  border-radius: var(--button-radius);
+  background-color: transparent;
+  color: var(--white);
+
+  text-transform: capitalize;
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: var(--light-salmon);
+    color: var(--bg-color);
+  }
+}

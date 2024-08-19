@@ -13,8 +13,13 @@
   /* Radius */
 
   --default-radius: 0.75rem;
+  --button-radius: 0.5rem;
+  --inline-padding: 0.75rem;
+  --block-padding: 1rem;
 
   /* Fonts */
+
+  --playlist-fs-title: calc(1rem + 0.5vw);
 
   --lato: "Lato", sans-serif;
   --red-hat-text: "Red Hat Text", sans-serif;
