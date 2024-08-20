@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
 import trackListImage from "../../../public/images/empty-tracklist-image.png";
 import "./TrackList.css";
 
@@ -34,11 +36,7 @@ function TrackListRender({ tracksData, addTrack }) {
         {tracksData.map((track) => {
           return (
             <>
-              <li
-                className="tracklist__track"
-                key={track.id}
-                onClick={addTrack}
-              >
+              <li className="tracklist__track" key={track.id}>
                 <div className="order">
                   <div className="superior">
                     <p className="track-name">{track.name}</p>
@@ -48,8 +46,12 @@ function TrackListRender({ tracksData, addTrack }) {
                     <p className="track-album">{track.album}</p>
                   </div>
                 </div>
-                <div className="button-container" key={track.id}>
-                  <button className="track-btn"></button>
+                <div
+                  className="button-container"
+                  key={track.id}
+                  onClick={addTrack}
+                >
+                  <FontAwesomeIcon icon={faCirclePlus} />
                 </div>
               </li>
             </>
