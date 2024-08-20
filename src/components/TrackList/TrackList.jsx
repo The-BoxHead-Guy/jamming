@@ -3,14 +3,17 @@ import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
 import trackListImage from "../../../public/images/empty-tracklist-image.png";
 import "./TrackList.css";
 
-function TrackList({ trackList, addTrack }) {
+function TrackList({ trackList, addSongToPlaylist }) {
   return (
     <>
       <div className="tracklist">
         {(trackList.length === 0 && <EmptyTrackList />) || (
           <>
             <TrackListResultTitle>Results</TrackListResultTitle>
-            <TrackListRender tracksData={trackList} addTrack={addTrack} />
+            <TrackListRender
+              tracksData={trackList}
+              addSongToPlaylist={addSongToPlaylist}
+            />
           </>
         )}
       </div>
@@ -29,7 +32,7 @@ function EmptyTrackList() {
   );
 }
 
-function TrackListRender({ tracksData, addTrack }) {
+function TrackListRender({ tracksData, addSongToPlaylist }) {
   return (
     <>
       <ul className="tracklist__tracks">
@@ -49,7 +52,7 @@ function TrackListRender({ tracksData, addTrack }) {
                 <div
                   className="button-container"
                   key={track.id}
-                  onClick={addTrack}
+                  onClick={() => addSongToPlaylist(track)}
                 >
                   <FontAwesomeIcon icon={faCirclePlus} />
                 </div>

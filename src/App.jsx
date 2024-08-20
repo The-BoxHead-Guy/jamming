@@ -11,8 +11,8 @@ function App() {
   const [tracks, setTracks] = useState([...testData]);
   const [playlist, setPlaylist] = useState([]);
 
-  function addTrack(newTrack) {
-    setTracks((prevTracks) => [...prevTracks, newTrack]);
+  function addSongToPlaylist(newSong) {
+    setPlaylist((prevSongs) => [...prevSongs, newSong]);
   }
 
   return (
@@ -20,7 +20,7 @@ function App() {
       <NavBar />
       <div className="app__container">
         <main>
-          <TrackList trackList={tracks} addTrack={addTrack} />
+          <TrackList trackList={tracks} addSongToPlaylist={addSongToPlaylist} />
           <PlayList playlistData={playlist} />
         </main>
       </div>
