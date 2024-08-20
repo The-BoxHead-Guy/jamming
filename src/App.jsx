@@ -8,8 +8,8 @@ import testData from "/public/test/data.json";
 
 function App() {
   /* Logic */
-  const [tracks, setTracks] = useState([]);
-  const [playlist, setPlaylist] = useState([...testData]);
+  const [tracks, setTracks] = useState([...testData]);
+  const [playlist, setPlaylist] = useState([]);
 
   function addTrack(newTrack) {
     setTracks((prevTracks) => [...prevTracks, newTrack]);

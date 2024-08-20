@@ -1,8 +1,8 @@
 .tracklist {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
   width: 100%;
   height: 100%;
 
@@ -10,6 +10,66 @@
   background-color: var(--bg-nav-lighter);
 
   border-radius: var(--default-radius);
+  padding: var(--block-padding);
+}
+
+.tracklist__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--fs-title);
+
+  width: 100%;
+  height: 10%;
+}
+
+.tracklist__tracks {
+  height: 90%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: var(--block-padding);
+  list-style-type: none;
+}
+
+.tracklist__track {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--inline-padding);
+
+  & .order {
+    display: flex;
+    flex-flow: column;
+    gap: 0.25rem;
+
+    & .superior {
+      & .track-name {
+        font-size: calc(1rem + 0.3vw);
+      }
+    }
+
+    & .inferior {
+      display: flex;
+      font-size: calc(1rem + 0.15vw);
+
+      & .track-artist {
+        color: var(--white-transparent);
+      }
+
+      & .track-artist::after {
+        content: "-";
+        margin-inline: 0.25rem;
+      }
+
+      & .track-album {
+        color: var(--yellow);
+      }
+    }
+  }
 }
 
 .tracklist__empty {
