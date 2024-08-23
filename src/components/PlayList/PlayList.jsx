@@ -1,5 +1,6 @@
 import "./PlayList.css";
 import SongList from "../../utility/SongList";
+import { useState } from "react";
 
 function PlayList({ playlistData, removeSongFromPlaylist }) {
   return (
@@ -17,10 +18,19 @@ function PlayListRender({ playlistData, removeSongFromPlaylist }) {
     ? { alignItems: "center" }
     : { alignItems: "flex-start" };
 
+  const [playListName, setPlayListName] = useState("");
+
+  function changePlayListName(e) {
+    setPlayListName(e.target.value);
+  }
+
   return (
     <>
       <div className="playlist">
-        <PlayListTitle>Playlist</PlayListTitle>
+        <PlayListTitle
+          playListName={playListName}
+          changePlayListName={changePlayListName}
+        />
 
         <div className="playlist__tracks" style={align}>
           {playlistData.length !== 0 ? (
@@ -42,10 +52,16 @@ function PlayListRender({ playlistData, removeSongFromPlaylist }) {
   );
 }
 
-function PlayListTitle() {
+function PlayListTitle({ playListName, changePlayListName }) {
   return (
     <div className="playlist__title">
-      <h2>My playlist</h2>
+      <input
+        type="text"
+        value={playListName}
+        onChange={(e) => changePlayListName(e)}
+        placeholder="Enter playlist name"
+        className="playlist__title"
+      />
     </div>
   );
 }

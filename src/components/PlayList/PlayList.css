@@ -18,9 +18,31 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: var(--fs-title);
+  font-size: calc(var(--fs-title) * 1.5);
+  font-weight: 700;
 
   height: 10%;
+
+  & input {
+    transition: all 0.25s ease-in-out;
+    text-align: center;
+    border: none;
+    outline: none;
+    color: var(--white);
+    background-color: transparent;
+    height: auto;
+    padding: 0.25rem;
+    border-radius: var(--default-radius);
+
+    &:focus {
+      box-shadow: 0 0 0 2px var(--yellow);
+    }
+
+    &::placeholder {
+      color: var(--yellow);
+      opacity: 0.5;
+    }
+  }
 }
 
 .playlist__tracks {
