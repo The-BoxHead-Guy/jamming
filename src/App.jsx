@@ -15,13 +15,22 @@ function App() {
     setPlaylist((prevSongs) => [...prevSongs, newSong]);
   }
 
+  function removeSongFromPlaylist(songToRemove) {
+    setPlaylist((prevSongs) =>
+      prevSongs.filter((song) => song !== songToRemove)
+    );
+  }
+
   return (
     <>
       <NavBar />
       <div className="app__container">
         <main>
           <TrackList trackList={tracks} addSongToPlaylist={addSongToPlaylist} />
-          <PlayList playlistData={playlist} />
+          <PlayList
+            playlistData={playlist}
+            removeSongFromPlaylist={removeSongFromPlaylist}
+          />
         </main>
       </div>
     </>

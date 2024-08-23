@@ -1,14 +1,20 @@
 import "./PlayList.css";
+import SongList from "../../utility/SongList";
+import AddSongBtn from "../../utility/AddSongBtn";
+import RemoveSongBtn from "../../utility/RemoveSongBtn";
 
-function PlayList({ playlistData }) {
+function PlayList({ playlistData, removeSongFromPlaylist }) {
   return (
     <>
-      <PlayListRender playlistData={playlistData}></PlayListRender>
+      <PlayListRender
+        playlistData={playlistData}
+        removeSongFromPlaylist={removeSongFromPlaylist}
+      />
     </>
   );
 }
 
-function PlayListRender({ playlistData }) {
+function PlayListRender({ playlistData, removeSongFromPlaylist }) {
   const align = !playlistData.length
     ? { alignItems: "center" }
     : { alignItems: "flex-start" };
@@ -20,13 +26,11 @@ function PlayListRender({ playlistData }) {
 
         <div className="playlist__tracks" style={align}>
           {playlistData.length !== 0 ? (
-            playlistData.map((song) => {
-              return (
-                <div className="song" key={song.id}>
-                  {song.name}
-                </div>
-              );
-            })
+            <SongList
+              tracksData={playlistData}
+              removeSongFromPlaylist={removeSongFromPlaylist}
+              isTrackSong={false}
+            />
           ) : (
             <PlayListEmpty />
           )}

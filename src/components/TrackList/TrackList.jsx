@@ -1,7 +1,7 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
 import trackListImage from "../../../public/images/empty-tracklist-image.png";
 import "./TrackList.css";
+import SongList from "../../utility/SongList";
+import AddSongBtn from "../../utility/AddSongBtn";
 
 function TrackList({ trackList, addSongToPlaylist }) {
   return (
@@ -10,9 +10,10 @@ function TrackList({ trackList, addSongToPlaylist }) {
         {(trackList.length === 0 && <EmptyTrackList />) || (
           <>
             <TrackListResultTitle>Results</TrackListResultTitle>
-            <TrackListRender
+            <SongList
               tracksData={trackList}
               addSongToPlaylist={addSongToPlaylist}
+              isTrackSong={true}
             />
           </>
         )}
@@ -28,39 +29,6 @@ function EmptyTrackList() {
         <img src={trackListImage} alt="" />
         <p>No tracks</p>
       </div>
-    </>
-  );
-}
-
-function TrackListRender({ tracksData, addSongToPlaylist }) {
-  return (
-    <>
-      <ul className="tracklist__tracks">
-        {tracksData.map((track) => {
-          return (
-            <>
-              <li className="tracklist__track" key={track.id}>
-                <div className="order">
-                  <div className="superior">
-                    <p className="track-name">{track.name}</p>
-                  </div>
-                  <div className="inferior">
-                    <p className="track-artist">{track.artist}</p>
-                    <p className="track-album">{track.album}</p>
-                  </div>
-                </div>
-                <div
-                  className="button-container"
-                  key={track.id}
-                  onClick={() => addSongToPlaylist(track)}
-                >
-                  <FontAwesomeIcon icon={faCirclePlus} />
-                </div>
-              </li>
-            </>
-          );
-        })}
-      </ul>
     </>
   );
 }
