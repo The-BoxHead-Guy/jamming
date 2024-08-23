@@ -1,7 +1,5 @@
 import "./PlayList.css";
 import SongList from "../../utility/SongList";
-import AddSongBtn from "../../utility/AddSongBtn";
-import RemoveSongBtn from "../../utility/RemoveSongBtn";
 
 function PlayList({ playlistData, removeSongFromPlaylist }) {
   return (

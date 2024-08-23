@@ -1,7 +1,6 @@
 import trackListImage from "../../../public/images/empty-tracklist-image.png";
 import "./TrackList.css";
 import SongList from "../../utility/SongList";
-import AddSongBtn from "../../utility/AddSongBtn";
 
 function TrackList({ trackList, addSongToPlaylist }) {
   return (

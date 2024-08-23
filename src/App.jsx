@@ -11,8 +11,19 @@ function App() {
   const [tracks, setTracks] = useState([...testData]);
   const [playlist, setPlaylist] = useState([]);
 
-  function addSongToPlaylist(newSong) {
-    setPlaylist((prevSongs) => [...prevSongs, newSong]);
+  /**
+   * Checks if a given song is already in the playlist.
+   * @param {object} newTrack - The song object to check.
+   * @returns {boolean} Whether the song is in the playlist.
+   */
+  function checkSongInPlaylist(newTrack) {
+    return playlist.includes(newTrack);
+  }
+
+  function addSongToPlaylist(newTrack) {
+    if (!checkSongInPlaylist(newTrack)) {
+      setPlaylist((prevTracks) => [...prevTracks, newTrack]);
+    }
   }
 
   function removeSongFromPlaylist(songToRemove) {
