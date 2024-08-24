@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Love Lies",
+    "artist": "Khalid & Normani",
+    "album": "Love, Simon (Original Motion Picture Soundtrack)",
+    "genre": "Pop"
+  },
+  {
+    "id": 2,
+    "name": "Location",
+    "artist": "Khalid",
+    "album": "American Teen",
+    "genre": "R&B"
+  },
+  {
+    "id": 3,
+    "name": "Talk",
+    "artist": "Khalid",
+    "album": "Free Spirit",
+    "genre": "R&B"
+  },
+  {
+    "id": 4,
+    "name": "Eastside",
+    "artist": "benny blanco, Halsey, and Khalid",
+    "album": "Eastside",
+    "genre": "Pop"
+  },
+  {
+    "id": 5,
+    "name": "Know Your Worth",
+    "artist": "Khalid & Disclosure",
+    "album": "Know Your Worth",
+    "genre": "Dance"
+  }
+]

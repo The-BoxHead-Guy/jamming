@@ -4,7 +4,7 @@ import NavBar from "./components/NavBar/NavBar";
 import TrackList from "./components/TrackList/TrackList";
 import PlayList from "./components/PlayList/PlayList";
 
-import testData from "/public/test/data.json";
+import testData from "../public/test/data.json";
 
 function App() {
   /* Logic */
